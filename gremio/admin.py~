@@ -10,7 +10,6 @@ class FamiliaAdmin(admin.ModelAdmin):
     pass
 
 class AfiliadoAdmin(admin.ModelAdmin):
-    raw_id_fields = ('localidad',)
     pass
 
 admin.site.register(Localidad, LocalidadAdmin)

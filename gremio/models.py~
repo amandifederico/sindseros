@@ -2,7 +2,6 @@
 from django.db import models
 from django.utils.encoding import force_unicode
 from django.contrib.admin import widgets  
-from django.utils.encoding import force_unicode
 
 # Create your models here.
 TIPO_E_CIVIL = (
@@ -21,10 +20,6 @@ class Localidad(models.Model):
     idlocalidad = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=200, verbose_name='Nombre')
     cp = models.IntegerField(blank=False, verbose_name = 'CP')
-    
-    def __unicode__(self):
-        return force_unicode(self.nombre)        
-        
 
 class Afiliado(models.Model):
     idafiliado = models.AutoField(primary_key=True)#nroafiliado
@@ -44,8 +39,6 @@ class Afiliado(models.Model):
     lugar_empleo = models.CharField(max_length=200, verbose_name='Lugar de Empleo', blank=True)
     antiguedad = models.IntegerField(blank=False, verbose_name = 'Antiguedad')
     categoria = models.CharField(max_length=10, verbose_name='Lugar de Empleo', blank=True)
-    def __unicode__(self):
-        return force_unicode(self.nombre)        
 
 class Familia(models.Model):
     idfamilia = models.AutoField(primary_key=True)
@@ -56,5 +49,3 @@ class Familia(models.Model):
     estado = models.CharField(max_length=200, verbose_name='Estado')
     fecha_nac = models.DateField(verbose_name= "Fecha de Nacimiento")
     fecha_vto = models.DateField(verbose_name= "Fecha de Vencimiento")
-    def __unicode__(self):
-        return force_unicode(self.nombre)        
