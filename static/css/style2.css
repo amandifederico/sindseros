@@ -1,0 +1,140 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color:black;
+}
+
+
+/* Botones */
+.btn-primary {
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+	padding: 5px 8px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: #3071a9;
+	border-color: #285e8e;
+	pading: 0;
+}
+
+
+/* NAVBAR */
+.navbar{
+	height:121px;
+	
+}
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-collapse{
+	font-size: 18px;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+	float:right;
+	
+	
+}
+
+.navbar-default .navbar-nav > li > a {
+	background-color: transparent;
+	color:white;
+	margin-top: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+	border-radius: 10px;
+	background:black;
+	color:white;
+	
+}
+/* JUMBOTRON */
+.jumbotron{
+	background:url(../images/bg_slider.jpg) repeat;
+	color:#002	;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	
+}
+.jumbotron h1, .jumbotron .h1 {
+	font-size: 45px;
+	color:blue;
+}
+
+.jumbotron p {
+	font-size: 18px;
+	
+}
+
+.container .jumbotron {
+	border-radius: 20px;
+}
+
+}/*Wrap*/
+
+.col-md-4 {
+	background: url(../images/box_bg.png) repeat;
+}
+
+.col-md-4 h2{
+	text-align:center;
+	color: #00a802;
+	padding: 15px 0 12px 0;
+}
+
+.col-md-4 span{
+	color: #0002a8;
+	padding: 15px 0 12px 0;
+}
+
+.col-md-4 p{
+	text-align:justify;
+	padding:15px;
+}
+.col-md-4 ul{
+	
+	padding:15px 30px;
+}
+
+.box {
+	border-radius: 20px;
+	background-color: #111111;
+	color: #edf3fa;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	margin: 30px;
+	min-height:340px;
+	max-width: 400px;
+	
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.col-md-4 > div {
+	
+	padding-top: 0;
+	overflow: hidden;
+}
+/* SLIDER */

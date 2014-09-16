@@ -7,8 +7,17 @@ mark, rp, rt, ruby, summary, time {display:inline}
 .wrapper {width:100%;overflow:hidden}
 .wrap{overflow:hidden;margin-left:-5px;padding-left:5px}
 /* Global properties */
-body {background:url(../images/bg_bot.jpg) center 0 repeat #faf3ed;border:0;font:14px Georgia, "Times New Roman", Times, serif;color:#002;line-height:24px}
-.ic, .ic a {border:0;float:right;background:#fff;color:#00f;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
+body {
+	background:url(../images/bg_bot.jpg) center 0 repeat #faf3ed;
+	border:0;
+	font:14px Georgia, "Times New Roman", Times, serif;
+	color:#002;
+	line-height:24px
+}
+
+.ic, .ic a {
+	border:0;float:right;background:#fff;color:#00f;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0
+}
 .css3{border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 4px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 4px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, .4);position:relative}
 /* Global Structure */
 .main {	margin:0 auto;}

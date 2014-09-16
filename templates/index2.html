@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Apissys{% endblock %}
+
+{% block welcome %}
+
+	<div class="jumbotron">
+		<h1>Bienvenidos!</h1>
+		<p>Nos resulta muy grato, darles la bienvenida a este espacio integrador, en el que pretendemos informar nuestras propuestas y convicciones con el único afán de consolidar una Asociación transparente, equitativa, incluyente y crítica.</p>
+		<p>Este grupo de trabajo está integrado por compañeros de diferentes delegaciones, agencias y casa central; buscando ser lo más federal posible a través de la integración e inclusión. Por ello consideramos necesario e importante tu opinión, porque sos parte de APISSYS!!!</p>
+		<p><a class="btn btn-primary btn-lg" role="button">Más »</a></p>
+    </div>
+{% endblock %}
+
+{% block wrap %}
+	<div class="row">
+		<div class="col-md-4">
+			<div class="box">
+			<h2>Zona de <span>Afiliados</span></h2>
+			<img src="{{STATIC_URL}}images/afiliados.jpg" alt="" >
+			<p>Aqui puedes ver todos los beneficios con los que cuentas por formar parte de nuestro gremio.</br>Registrate e Ingresa</p>
+			<p><a class="btn btn-default" href="#" role="button">Ir »</a></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box">
+				<h2>¿Quienes <span>Somos?</span></h2>
+				<img src="{{STATIC_URL}}images/seros.jpg" alt="" >
+				<p>Nos resulta muy grato, darles la bienvenida a este espacio integrador, en el que pretendemos informar nuestras propuestas y convicciones...</p>
+				<p><a class="btn btn-default" href="#" role="button">ir »</a></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="box">
+				<h2>Documentos</h2>
+				<img src="{{STATIC_URL}}images/Documentos.jpg" alt="" >
+				<ul class="list1 pad_bot1">
+					<li><a href="#">Resoluciones</a></li>
+					<li><a href="#">Expedientes</a></li>
+					<li><a href="#">Gacetillas</a></li>
+					<li><a href="#">Otros</a></li>
+				</ul>
+				<p><a class="btn btn-default" href="#" role="button">Ir »</a></p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block news %}
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item">
+          <img src="{{STATIC_URL}}images/bg_top_img.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item active">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+
+
+
+{% endblock %}
