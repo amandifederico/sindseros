@@ -7,3 +7,6 @@ def index(request):
 	
 def prueba(request):
 	return render_to_response('index2.html',context_instance=RequestContext(request))
+	
+def contacto(request):
+	return render_to_response('contacts.html',context_instance=RequestContext(request))
