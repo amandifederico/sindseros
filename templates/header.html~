@@ -1,5 +1,5 @@
 <header>
-	<h1><a href="/index" id="logo"><img src="{{STATIC_URL}}images/logo.png"/></a></h1>
+	<h1><a href="index.html" id="logo"><img src="{{STATIC_URL}}images/logo.png"/></a></h1>
 	<nav>
 		<ul id="top_nav">
 			<li><a href=""><img src="{{STATIC_URL}}images/icon_1.gif" alt=""></a></li>

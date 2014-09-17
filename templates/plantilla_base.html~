@@ -57,7 +57,7 @@
 					</nav>
 					<nav>
 						<ul id="menu">
-							<li class="active"><a href="index.html">Inicio</a></li>
+							<li class="active"><a href="index">Inicio</a></li>
 							<li><a href="Cuisine.html">Opcion1</a></li>
 							<li><a href="Wine.html">Opcion2</a></li>
 							<li><a href="CookBook.html">Opcion3</a></li>
