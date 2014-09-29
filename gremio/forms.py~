@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+from django import forms
+from gremio.models import *
+from django.contrib.admin import widgets
+from django.forms.widgets import *
+#from django.contrib.admin.widgets import widgets
+from django.forms.fields import DateField
+
+
+
+class formAfiliado(forms.ModelForm):
+    fecha_nac = forms.DateField(label="Fecha Nacimiento",widget=forms.DateInput(format='%d/%m/%Y',attrs={'id':'dp1','class':'datepicker','data-date-format':'dd/mm/yyyy'}))
+    fecha_ingreso = forms.DateField(label="Fecha Ingreso",widget=forms.DateInput(format='%d/%m/%Y',attrs={'id':'dp2','class':'datepicker','data-date-format':'dd/mm/yyyy'}))
+    
+    class Meta:
+        model  = Agente
+        fields = ('idagente', 'nrolegajo', 'apellido', 'nombres','tipodoc','nrodocumento','sexo','fechanacimiento','nacionalidad','estadocivil','codigopostal','domicilio','telefono','fechaalta','cargo','clase','categoria','titulo','planta','agrupamiento','iddireccion','iddireccionreal','nrocuenta','nrocontrato','nrolegajosueldos','observaciones', 'total102', 'seccion', 'dexc', 'defun', 'funcion', 'idzona', 'idzonareal','claseac','antigranios','antigrmeses','antigrvanios','antigrvmeses','antigravpanios','antigravpmeses', 'situacion', 'fechabaja','razonbaja')
+    def __init__(self, *args, **kwargs):
+        super(formAgente, self).__init__(*args, **kwargs)
+        self.fields['tipodoc'].widget = forms.Select(choices=TIPO_DOC)
+        self.fields['estadocivil'].widget = forms.Select(choices=TIPO_ECIVIL)
+        self.fields['categoria'].widget = forms.Select(choices=TIPO_CATEGORIA)
+        self.fields['total102'].widget.attrs['disabled'] = 'disabled'

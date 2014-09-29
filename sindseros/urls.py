@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from django.contrib import admin
+from django.contrib import * #admin
 from gremio.views import *
 urlpatterns = patterns('',
     # Examples:
@@ -11,4 +11,7 @@ urlpatterns = patterns('',
 	url(r'^index/', index),
 	url(r'^prueba/', prueba), 
 	url(r'^contacts/', contacto), 
+	url(r'^afiliado/', afiliado),
+        url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+	url(r'^registration/logged_out.html$',logout),
 )

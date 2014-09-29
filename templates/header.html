@@ -5,12 +5,29 @@
 			<li><a href=""><img src="{{STATIC_URL}}images/icon_1.gif" alt=""></a></li>
 			<li><a href="#"><img src="{{STATIC_URL}}images/icon_2.gif" alt=""></a></li>
 			<li class="end"><a href="contacts"><img src="{{STATIC_URL}}images/icon_3.gif" alt=""></a></li>
+			<li>			
+				{% if user.is_active and user.is_staff %}
+					<div class="nav-collapse collapse">
+						<div class="navbar-text pull-right" >
+						Bienvenido
+						<strong>{% filter force_escape %}{% firstof user.first_name user.username %}{% endfilter %}</strong>.
+						{% block userlinks %}
+						    {% url 'django-admindocs-docroot' as docsroot %}
+						    {% if docsroot %}
+							<a href="{{ docsroot }}">Doc</a> /
+						    {% endif %}
+						    <a href="/registration/logged_out.html">Salir</a>
+						{% endblock %}
+						</div>
+					</div>
+				{% endif %}
+			</li>
 		</ul>
 	</nav>
 	<nav>
 		<ul id="menu">
 			<li class="active"><a href="/index">Inicio</a></li>
-			<li><a href="Cuisine.html">Opcion1</a></li>
+			<li><a href="/afiliado">Afiliados</a></li>
 			<li><a href="Wine.html">Opcion2</a></li>
 			<li><a href="CookBook.html">Opcion3</a></li>
 			<li><a href="/contacts">Contacto</a></li>
