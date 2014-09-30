@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "listado_base.html" %}
 
 {% block title %}Afiliado{% endblock %}
 
@@ -13,25 +13,24 @@
 						<div class="box">
 							<div>
 								<h2 class="letter_spacing">{{titulo}}</h2>
-								<h3 class="letter_spacing">Cantidad registrada{{cant}}</h3>
-								<table>
+								<h4 class="letter_spacing">Cantidad registrada {{cant}}</h4>
+								<table class="table table-striped">
 									<tr>
 										<th>Apellido</th>
 										<th>Nombre</th>
 										<th>Documento</th>
 										<th>Ciudad</th>
 									</tr>
-									{%for a in afi%}
-										<tr>
-											<td>{{a.apellido}}</td>
-											<td>{{a.nombre}}</td>
-											<td>{{a.documento}}</td>
-											<td>{{a.ciudad}}</td>
+									{%for l in lista%}
+										<tr class="{% cycle 'row1' 'row2' %}">
+											<td>{{l.apellido}}</td>
+											<td>{{l.nombre}}</td>
+											<td>{{l.documento}}</td>
+											<td>{{l.ciudad}}</td>
 										</tr>
 									{%endfor%}
 								</table>
-								{% block prevpage%}{% endblock %}
-								{% block nextpage%}{% endblock %}
+								{% include 'paginador.html' %}							
 							</div>
 						</div>
 					</div>

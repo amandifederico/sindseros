@@ -9,6 +9,7 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from gremio.models import *
+from gremio.forms import *
 
 def paginar(objlist,peticion):
     paginator = Paginator(objlist,40)
@@ -39,8 +40,15 @@ def afiliado(request):
 	afiliados = Afiliado.objects.all().order_by('apellido')
 	titulo = "Listado Afiliados"
 	cant = afiliados.count()
-	afi = paginar(afiliados,request)
-        return render_to_response('afiliados.html',context_instance=RequestContext(request,{'afi':afi,'titulo':titulo,'cant':cant},))
+	lista = paginar(afiliados,request)
+        return render_to_response('afiliados.html',context_instance=RequestContext(request,{'lista':lista,'titulo':titulo,'cant':cant},))
+
+@login_required(login_url='/accounts/login/')
+def abmAfiliado(request):
+        #esta en estado de solo carga, hay que modificar para baja y modificacion
+	form = formAfiliado()
+	return render_to_response('forms/abm.html',context_instance=RequestContext(request, {'form': form}))
+
 
 #////////////////////////////////////////////////////////////////////////////////////////
 def logout(request, next_page=None,
