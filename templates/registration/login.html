@@ -5,10 +5,9 @@
 
 {% block footer %}{% endblock %}
 {% block extrastyle %}
-   {{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "/site_media/personal/css/login.css" %}" />
+   {{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "{{STATIC_URL}}/css/login.css" %}" />
    <div id="content-images">
-      <img src="/site_media/personal/img/logo-login.png" alt="logo-stock" style="margin: 2px 0px 0px 22px;float: left; " />
-      <img src="/site_media/admin/img/logonew-avp.png" alt="logo-avp" style="margin: 12px 35px 0px 0px;float: right; "  />
+      <img src="{{STATIC_URL}}/img/logo_30.png" alt="logo-apisys" style="margin: 2px 0px 0px 22px;float: left; " />
    </div>
    {% endblock %}
 

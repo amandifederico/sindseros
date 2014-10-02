@@ -1,26 +1,38 @@
 {% extends "base.html" %}
 
+{% block script %}
+	{% include 'extrascript.html' %}
+	<script type="text/javascript"> Cufon.now(); </script>
+{% endblock %}
 
-{% block content %}
-<div id="content-main" >
-	<div id="form_container">	    
-		<form id="" class="" method="post" action="" onsubmit="" onclick="" >
-			<fieldset>
-				{% block titulo-form %}
-					<td><b><font color="#000000" style="font-size: 13px;">ABM</font></b></td> 
-				{% endblock %}
+{% block body %}
+	<div class="body6">
+		<div class="body1">
+			<div class="main zerogrid">
+				{% include 'header.html' %}
+				<article id="content">
+					<div class="wrap">
+						<div class="box">
+							<div>
+							{% block titulo-form %}
+							{% endblock %}
+							{% block contenido-form %}
+							{% endblock %}
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+	<div class="body2">
+		
+	</div>
+	<div class="body3">
+		<div class="main zerogrid">
+			{% include 'footer.html' %}
+		</div>
+	</div>
 
-				{% block contenido-form %}
-				
-				{% endblock %}
-			</fieldset>	
-			<input id="saveForm" style="margin-left: 280px; width: 140px; background:orange;" class="button_text" type="submit" name="submit" value="Guardar" />
-			<input type="button" value="Volver Atrás" name="Back2" onclick="history.back()" style="
-			  margin-left: 10px;
-			  width: 140px;
-			  height: 22px;
-			" />
-		</form> 
-	</div>	
-</div>
+</body>
 {% endblock %}

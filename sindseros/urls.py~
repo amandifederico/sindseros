@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 	url(r'^prueba/', prueba), 
 	url(r'^contacts/', contacto), 
 	url(r'^afiliado/$', afiliado),
+        url(r'^abmafiliado/$',abmAfiliado),
         url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
 	url(r'^registration/logged_out.html$',logout),
-        url(r'^abmafiliado/$'),abmAfiliado),
 )
