@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% block title %}{% endblock %}</title>
-		<!-- Scripts -->
-		<link rel="stylesheet" href="{{STATIC_URL}}css/reset.css" type="text/css" media="all" />
-		<link rel="stylesheet" href="{{STATIC_URL}}css/layout.css" type="text/css" media="all">
-		<link rel="stylesheet" href="{{STATIC_URL}}css/style.css" type="text/css" media="all">
-		<link rel="stylesheet" href="{{STATIC_URL}}css/zerogrid.css" type="text/css" media="all">
-		<link rel="stylesheet" href="{{STATIC_URL}}css/responsive.css" type="text/css" media="all"> 
-		<link rel="stylesheet" href="{{STATIC_URL}}css/responsiveslides.css" /> 
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+	<!-- Scripts -->
+	<link rel="stylesheet" href="{{STATIC_URL}}css/reset.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="{{STATIC_URL}}css/layout.css" type="text/css" media="all">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/zerogrid.css" type="text/css" media="all">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/responsive.css" type="text/css" media="all"> 
+	<link rel="stylesheet" href="{{STATIC_URL}}css/responsiveslides.css" /> 
 
-		
-		<script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.11.1.min.js" ></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/cufon-yui.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/cufon-replace.js"></script>  
-		<script type="text/javascript" src="{{STATIC_URL}}js/Forum_400.font.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/tms-0.3.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/tms_presets.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/script.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/atooltip.jquery.js"></script> 
-		<script type="text/javascript" src="{{STATIC_URL}}js/css3-mediaqueries.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/responsiveslides.js"></script>
-		<script type="text/javascript" src="{{STATIC_URL}}js/bootstrap-datepicker.js" ></script>
-		{% block script %}{% endblock %}
-	</head>
-	{% block body %}{% endblock %}
+	
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/cufon-yui.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/cufon-replace.js"></script>  
+	<script type="text/javascript" src="{{STATIC_URL}}js/Forum_400.font.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/tms-0.3.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/tms_presets.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/script.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/atooltip.jquery.js"></script> 
+	<script type="text/javascript" src="{{STATIC_URL}}js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/responsiveslides.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/bootstrap-datepicker.js" ></script>
+	{% block script %}{% endblock %}
+</head>
+
+
+<body id="page1">
+	<div class="body6">
+		<div class="body1">
+			<div class="body5">
+				<div class="main zerogrid">
+					{% include 'header.html' %}
+					<article id="content">
+						{% block body-article1%}
+						{% endblock %}
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body2">
+		<div class="main zerogrid">
+			<article id="content2">
+				{% block body-article2%}
+				{% endblock %}
+			</article>
+		</div>
+	</div>
+	<div class="body3">
+		<div class="main zerogrid">
+			{% include 'footer.html' %}	
+		</div>
+	</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+
 </html>

@@ -54,7 +54,7 @@ def abmAfiliado(request,idafiliado):
 			try:
 				aux = Afiliado.objects.get(documento=form.instance.documento)
 				accion = "Modificacion"
-			except Agente.DoesNotExist:
+			except Afiliado.DoesNotExist:
 				accion = "Alta"
 				#if ("Datos Afiliado" not in get_grupos(user)):
 				if True:
