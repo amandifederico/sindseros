@@ -14,7 +14,7 @@
 							<div>
 								<h2 class="letter_spacing">{{titulo}}</h2>
 								<h4 class="letter_spacing">Cantidad registrada {{cant}}</h4>
-								<table>
+								<table class="table table-striped">
 									<tr>
 										<th>Apellido</th>
 										<th>Nombre</th>
